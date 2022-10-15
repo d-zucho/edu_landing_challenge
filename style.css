@@ -175,11 +175,17 @@ header {
 }
 
 .detail__button {
+  display: inline;
   font-size: var(--btn-font);
   font-weight: var(--btn-weight);
   line-height: var(--btn-line);
   color: var(--color-hotPink);
   cursor: pointer;
+  transition: 200ms ease-in-out all;
+}
+
+.detail__button:hover {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 }
 
 footer {
