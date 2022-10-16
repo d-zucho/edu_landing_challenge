@@ -97,10 +97,12 @@ header {
 
 .hero__title {
   font-size: var(--headingL-font);
+  /* font-size: 1.25rem; */
+
   color: var(--color-darkBlue);
   line-height: var(--headingL-line);
   font-weight: var(--heading-weight);
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
 }
 
 .hero__intro {
@@ -109,6 +111,7 @@ header {
   line-height: var(--bodyS-line);
   color: var(--color-gray);
   padding-bottom: 1.5rem;
+  width: min(500px, 100%);
 }
 
 .hero__button {
@@ -127,12 +130,21 @@ header {
 .hero__visuals {
   width: 100%;
   margin-top: 2rem;
+  text-align: center;
 }
-.hero__visuals img {
+/* .hero__visuals img {
   width: 100%;
   aspect-ratio: auto;
+} */
+
+.mobile-hero-img {
+  max-width: 500px;
 }
 .tablet-hero-img {
+  display: none;
+}
+
+.desktop-hero-img {
   display: none;
 }
 
@@ -223,6 +235,8 @@ footer button:hover {
   opacity: 0.8;
 }
 
+/**** SIZE ADJUSTMENTS  ******/
+
 @media screen and (min-width: 768px) {
   body {
     /* background-color: red; */
@@ -248,6 +262,14 @@ footer button:hover {
     margin: 0;
   }
 
+  .hero__title {
+  }
+
+  .hero__intro {
+    font-size: 1.15rem;
+    width: min(550px, 100%);
+  }
+
   .mobile-hero-img {
     display: none;
   }
@@ -263,7 +285,63 @@ footer button:hover {
     gap: 2.5rem 1rem;
   }
 
+  .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .details-intro {
     padding-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .body__container {
+    margin: 0 20rem;
+  }
+
+  .main__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding-right: 2.25rem;
+  }
+
+  .hero__title {
+    font-size: var(--headingXL-font);
+    line-height: var(--headingXL-line);
+    margin-top: 2rem;
+  }
+
+  .hero__button {
+    padding: 12px 40px;
+    font-size: 18px;
+  }
+
+  .tablet-hero-img {
+    display: none;
+  }
+
+  .desktop-hero-img {
+    display: block;
+    align-self: flex-start;
+    margin-top: -4rem;
+    min-width: 500px;
+  }
+
+  .hero__visuals img {
+    width: 100%;
+    /* max-width: 475px; */
+  }
+
+  .courses-details {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .detail__info {
+    font-size: 0.85rem;
   }
 }
