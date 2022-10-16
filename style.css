@@ -130,6 +130,10 @@ header {
 }
 .hero__visuals img {
   width: 100%;
+  aspect-ratio: auto;
+}
+.tablet-hero-img {
+  display: none;
 }
 
 .courses-details {
@@ -194,7 +198,7 @@ footer {
 
 .footer__container {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -208,7 +212,7 @@ footer .logo {
 
 footer button {
   background-image: var(--linear-gradient-dark);
-  padding: 8px 12px;
+  padding: 0.525rem 2rem;
   cursor: pointer;
   border: none;
   background-color: white;
@@ -217,4 +221,49 @@ footer button {
 
 footer button:hover {
   opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    /* background-color: red; */
+    max-width: 100vw;
+  }
+
+  .body-container {
+    margin: 0 1.5rem;
+  }
+
+  header {
+    padding: 1.5rem 2.25rem;
+  }
+
+  .header__container .logo {
+    /* color: var(--color-gray); */
+    opacity: 0.1;
+  }
+
+  .hero {
+    flex-direction: row;
+    position: relative;
+    margin: 0;
+  }
+
+  .mobile-hero-img {
+    display: none;
+  }
+
+  .tablet-hero-img {
+    display: block;
+    align-self: flex-start;
+    margin-top: -6rem;
+  }
+
+  .courses-details {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1rem;
+  }
+
+  .details-intro {
+    padding-top: 3rem;
+  }
 }
